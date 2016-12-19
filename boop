@@ -1,0 +1,13 @@
+#!/bin/sh
+usage ()
+{
+  echo 'Usage : boop keyfile sourcefile targetfile'
+  echo ' example: boop abc.txt def.txt xyz.txt'
+  exit
+}
+
+if [ "$#" -ne 3 ]
+then
+  usage
+fi
+awk '{print "s/"$1"/"$3"/g"}' $1 > boopsedscript; sed -f boopsedscript $2 > $3; rm boopsedscript
