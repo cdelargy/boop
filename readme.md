@@ -1,22 +1,22 @@
-$ pwd
-/Users/me/github/boop
+  $ pwd
+  /Users/me/github/boop
 
-$ ls
-boop		key.txt		testdata.txt
+  $ ls
+  boop		key.txt		testdata.txt
 
-$ ./boop
-Usage : boop keyfile sourcefile targetfile
- example: boop abc.txt def.txt xyz.txt
+  $ ./boop
+  Usage : boop keyfile sourcefile targetfile
+  example: boop abc.txt def.txt xyz.txt
 
-$ cat key.txt
-A = goeswithA
-B = weirdstuffgoeswithB
-C = moreweirdstuffthatgoeswithC
+  $ cat key.txt
+  A = goeswithA
+  B = weirdstuffgoeswithB
+  C = moreweirdstuffthatgoeswithC
 
-$ cat testdata.txt
-B, C, A
+  $ cat testdata.txt
+  B, C, A
 
-$ ./boop key.txt testdata.txt output.txt
+  $ ./boop key.txt testdata.txt output.txt
 
-$ cat output.txt
-weirdstuffgoeswithB, moreweirdstuffthatgoeswithC, goeswithA
+  $ cat output.txt
+  weirdstuffgoeswithB, moreweirdstuffthatgoeswithC, goeswithA
